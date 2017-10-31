@@ -7,56 +7,50 @@
     android:background="@color/colorPrimaryDark"
     tools:context="nyc.c4q.homeworksimonsays.MainActivity">
 
-
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="@dimen/layout_height"
-        android:layout_marginTop="140dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:id="@+id/linearLayout">
     <Button
         android:id="@+id/green_button"
         android:layout_width="@dimen/button_width"
-        android:layout_height="match_parent"
+        android:layout_height="@dimen/button_height"
         android:background="@color/greenButton"
         android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
       />
+    <Button
+        android:id="@+id/red_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/redButton"
+        android:layout_margin="5dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        />
+    <Button
+        android:id="@+id/blue_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/blueButton"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        />
+    <Button
+        android:id="@+id/yellow_button"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:background="@color/yellowButton"
+        android:layout_margin="5dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        />
 
-        <Button
-            android:id="@+id/red_button"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="match_parent"
-            android:background="@color/redButton"
-            android:layout_margin="5dp"
-            />
-    </LinearLayout>
-
-    <LinearLayout
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
-        android:layout_height="150dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginEnd="40dp"
-        android:layout_below="@+id/linearLayout"
-       >
-        <Button
-            android:id="@+id/blue_button"
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:background="@color/blueButton"
-            android:layout_margin="5dp"
-            />
-
-        <Button
-            android:id="@+id/yellow_button"
-            android:layout_width="136dp"
-            android:layout_height="match_parent"
-            android:background="@color/yellowButton"
-            android:layout_margin="5dp"
-            />
-    </LinearLayout>
-
-
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"/>
 
 
 </RelativeLayout>
