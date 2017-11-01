@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button buttonRed;
     Button buttonBlue;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void changeColorBt1(View v){
+    public void onClickGreenButton(View v){
         buttonGreen = (Button) findViewById(R.id.green_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         storeTurn.addToList("G");
     }
 
-    public void changeColorBt2(View v){
+    public void onClickRedButton(View v){
        buttonRed = (Button) findViewById(R.id.red_button);
        new CountDownTimer(50, 10) {
            public void onTick(long millisUntilFinished) {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
        }.start();
        storeTurn.addToList("R");
    }
-    public void changeColorBt3(View v){
+    public void onClickBlueButton(View v){
         buttonBlue = (Button) findViewById(R.id.blue_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
         }.start();
         storeTurn.addToList("B");
     }
-    public void changeColorBt4(View v){
+    public void onClickYellowButton(View v){
         buttonYellow = (Button) findViewById(R.id.yellow_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
@@ -81,4 +81,8 @@ public class MainActivity extends AppCompatActivity {
         storeTurn.addToList("Y");
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
