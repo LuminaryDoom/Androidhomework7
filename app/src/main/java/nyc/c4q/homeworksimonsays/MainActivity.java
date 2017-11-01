@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import java.util.Random;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     Button buttonRed;
     Button buttonBlue;
@@ -81,4 +81,8 @@ public class MainActivity extends AppCompatActivity {
         storeTurn.addToList("Y");
     }
 
+    @Override
+    public void onClick(View v) {
+
+    }
 }
