@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name= "redButton">#8b0000</color>
+    <color name ="blueButton">#000080</color>
+    <color name ="greenButton">#006400</color>
+    <color name="yellowButton">#B2B200</color>
+
+    <color name= "flash_redButton">#FF0000</color>
+    <color name ="flash_blueButton">#00bfff</color>
+    <color name ="flash_greenButton">#32CD32</color>
+    <color name="flash_yellowButton">#FFFF00</color>
+</resources>
