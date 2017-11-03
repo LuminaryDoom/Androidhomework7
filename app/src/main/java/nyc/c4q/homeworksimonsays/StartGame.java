@@ -19,7 +19,7 @@ public class StartGame extends AppCompatActivity {
         setContentView(R.layout.start_game);
     }
 
-    public void onClickStartButton(View view) {
+    public void onClickStart(View view) {
         startButton = (Button) findViewById(R.id.start_button);
         Intent start = new Intent(this,MainActivity.class);
         startActivity(start);
