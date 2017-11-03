@@ -6,7 +6,7 @@ import java.util.LinkedList;
  * Created by c4q on 10/30/17.
  */
 
-public class storeTurn {
+public class StoreTurn {
 
 
     public static int turnCounter = 0;
