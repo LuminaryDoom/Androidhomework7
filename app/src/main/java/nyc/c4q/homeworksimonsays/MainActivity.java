@@ -7,8 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,10 +19,16 @@ public class MainActivity extends AppCompatActivity {
     Button buttonBlue;
     Button buttonGreen;
     Button buttonYellow;
+    TextView gameStatus;
     MediaPlayer soundEffectOne;
     MediaPlayer soundEffectTwo;
     MediaPlayer soundEffectThree;
     MediaPlayer soundEffectFour;
+
+    ArrayList<Integer> buttonPressCheck = new ArrayList<>();
+    ArrayList<Integer> buttonPressList = new ArrayList<>();
+    int turn;
+    int buttonPresses;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
     public void onClickGreenButton(View v) {
         soundEffectOne.start();
         buttonGreen = (Button) findViewById(R.id.green_button);
-        new CountDownTimer(50, 10) {
+        new CountDownTimer(100, 10) {
             public void onTick(long millisUntilFinished) {
                 buttonGreen.setBackgroundResource(R.color.flash_greenButton);
             }
@@ -51,12 +59,13 @@ public class MainActivity extends AppCompatActivity {
             }
         }.start();
 
+        buttonPressCheck.add(1);
     }
 
     public void onClickRedButton(View v) {
         soundEffectTwo.start();
         buttonRed = (Button) findViewById(R.id.red_button);
-        new CountDownTimer(50, 10) {
+        new CountDownTimer(100, 10) {
             public void onTick(long millisUntilFinished) {
                 buttonRed.setBackgroundResource(R.color.flash_redButton);
             }
@@ -65,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 buttonRed.setBackgroundResource(R.color.redButton);
             }
         }.start();
-
+        buttonPressCheck.add(2);
     }
 
     public void onClickBlueButton(View v) {
         soundEffectThree.start();
         buttonBlue = (Button) findViewById(R.id.blue_button);
-        new CountDownTimer(50, 10) {
+        new CountDownTimer(100, 10) {
             public void onTick(long millisUntilFinished) {
                 buttonBlue.setBackgroundResource(R.color.flash_blueButton);
             }
@@ -80,13 +89,13 @@ public class MainActivity extends AppCompatActivity {
                 buttonBlue.setBackgroundResource(R.color.blueButton);
             }
         }.start();
-
+        buttonPressCheck.add(3);
     }
 
     public void onClickYellowButton(View v) {
         soundEffectFour.start();
         buttonYellow = (Button) findViewById(R.id.yellow_button);
-        new CountDownTimer(50, 10) {
+        new CountDownTimer(100, 10) {
             public void onTick(long millisUntilFinished) {
                 buttonYellow.setBackgroundResource(R.color.flash_yellowButton);
             }
@@ -95,35 +104,49 @@ public class MainActivity extends AppCompatActivity {
                 buttonYellow.setBackgroundResource(R.color.yellowButton);
             }
         }.start();
+        buttonPressList.add(4);
+        buttonPressCheck.add(4);
+    }
 
+    public void turnCounter(boolean aiTurn){
+        if( aiTurn == false ){
+            if(buttonPressList.contains(buttonPressCheck)){
+                buttonPresses++;
+                if(buttonPresses == turn){
+                    buttonPresses = 0;
+                    playPreviousTurns();
+                }
+            }else{
+                System.exit(0);
+            }
+        }
     }
 
     public void playPreviousTurns(){
-        int i = 0;
+        turnCounter(true);
         Random random = new Random();
         int randomButton = random.nextInt(4)+1;
-        storeTurn.list1.add(randomButton);
-        while(i < storeTurn.list1.size()){
-            int temp = storeTurn.list1.get(i);
+       buttonPressList.add(randomButton);
+        for(int i = 0; i<buttonPressList.size(); i++){
+            int temp = buttonPressList.get(i);
             switch (temp) {
                 case 1:
                     buttonGreen.performClick();
-                    i++;
                     break;
                 case 2:
                     buttonBlue.performClick();
-                    i++;
                     break;
                 case 3:
                     buttonYellow.performClick();
-                    i++;
                     break;
                 case 4:
                     buttonRed.performClick();
-                    i++;
                     break;
             }
         }
+        buttonPresses = 0;
+        turnCounter(false);
+        turn++;
     }
 
 }
