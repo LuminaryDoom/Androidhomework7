@@ -1,6 +1,5 @@
 package nyc.c4q.homeworksimonsays;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -9,10 +8,13 @@ import java.util.LinkedList;
 
 public class storeTurn {
 
-    public static LinkedList<Integer> list1 = new LinkedList<>();
 
-    public static void addToList(int num) {
-        list1.add(num);
+    public static int turnCounter = 0;
+
+    public static LinkedList <Integer> list1 = new LinkedList<>();
+
+    public static void addToList(int choice) {
+        list1.add(choice);
     }
 
 }
