@@ -3,75 +3,78 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_centerInParent="true"
     android:background="@color/colorPrimaryDark"
-    tools:context="nyc.c4q.homeworksimonsays.MainActivity"
-    android:layout_centerInParent="true">
-<LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true">
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentRight="true">
-
-        <Button
-            android:id="@+id/green_button"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_margin="5dp"
-            android:background="@drawable/green_button"
-            android:onClick="onClickGreenButton" />
-
-        <Button
-            android:id="@+id/red_button"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:background="@drawable/red_button"
-            android:layout_margin="5dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:onClick="onClickRedButton" />
-    </LinearLayout>
+    tools:context="nyc.c4q.homeworksimonsays.MainActivity">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_alignParentLeft="true">
+        android:layout_centerInParent="true">
 
-        <Button
-            android:id="@+id/blue_button"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:background="@drawable/blue_button"
-            android:layout_margin="5dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentStart="true"
-            android:onClick="onClickBlueButton" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:orientation="vertical">
 
-        <Button
-            android:id="@+id/yellow_button"
-            android:layout_width="@dimen/button_width"
-            android:layout_height="@dimen/button_height"
-            android:background="@drawable/yellow_button"
-            android:layout_margin="5dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"
-            android:onClick="onClickYellowButton" />
+            <Button
+                android:id="@+id/green_button"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/green_button"
+                android:onClick="onClickGreenButton" />
+
+            <Button
+                android:id="@+id/red_button"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentTop="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/red_button"
+                android:onClick="onClickRedButton" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/yellow_button"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/yellow_button"
+                android:onClick="onClickYellowButton" />
+
+            <Button
+                android:id="@+id/blue_button"
+                android:layout_width="@dimen/button_width"
+                android:layout_height="@dimen/button_height"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_margin="5dp"
+                android:background="@drawable/blue_button"
+                android:onClick="onClickBlueButton" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true" />
+        android:layout_centerVertical="true"
+        android:text="TextView" />
 
 
 </RelativeLayout>
