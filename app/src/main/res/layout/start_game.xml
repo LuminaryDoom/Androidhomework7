@@ -37,7 +37,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="5dp"
                     android:background="@drawable/green_button"
-                    android:onClick="onClickGreenButton" />
+                    />
 
                 <ImageView
                     android:id="@+id/red_button"
@@ -47,7 +47,7 @@
                     android:layout_alignParentTop="true"
                     android:layout_margin="5dp"
                     android:background="@drawable/red_button"
-                    android:onClick="onClickRedButton" />
+                    />
             </LinearLayout>
 
             <LinearLayout
@@ -64,7 +64,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_margin="5dp"
                     android:background="@drawable/blue_button"
-                    android:onClick="onClickBlueButton" />
+                   />
 
                 <ImageView
                     android:id="@+id/yellow_button"
@@ -74,7 +74,7 @@
                     android:layout_alignParentEnd="true"
                     android:layout_margin="5dp"
                     android:background="@drawable/yellow_button"
-                    android:onClick="onClickYellowButton" />
+                     />
             </LinearLayout>
         </LinearLayout>
 
@@ -93,7 +93,8 @@
                 android:textColor="#FFFFFF"
                 android:text="Start!"
                 android:background="@drawable/start_button"
-                android:onClick="onClickStartButton"/>
+                android:onClick="onClickStart"
+                />
         </LinearLayout>
     </RelativeLayout>
 
