@@ -25,6 +25,9 @@
         <activity
             android:name=".NewGame">
         </activity>
+        <activity
+            android:name=".StartGame">
+        </activity>
 
     </application>
 
