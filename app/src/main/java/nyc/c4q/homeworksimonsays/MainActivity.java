@@ -43,14 +43,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonGreen = (Button) findViewById(R.id.green_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
-                buttonGreen.setBackgroundResource(R.color.flash_greenButton);
+                buttonGreen.setBackgroundResource(R.drawable.flash_green);
             }
 
             public void onFinish() {
-                buttonGreen.setBackgroundResource(R.color.greenButton);
+                buttonGreen.setBackgroundResource(R.drawable.green_button);
             }
         }.start();
-        storeTurn.addToList("G");
+        StoreTurn.addToList("G");
     }
 
     public void onClickRedButton(View v) {
@@ -58,14 +58,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonRed = (Button) findViewById(R.id.red_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
-                buttonRed.setBackgroundResource(R.color.flash_redButton);
+                buttonRed.setBackgroundResource(R.drawable.flash_red);
             }
 
             public void onFinish() {
-                buttonRed.setBackgroundResource(R.color.redButton);
+                buttonRed.setBackgroundResource(R.drawable.red_button);
             }
         }.start();
-        storeTurn.addToList("R");
+        StoreTurn.addToList("R");
     }
 
     public void onClickBlueButton(View v) {
@@ -73,14 +73,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonBlue = (Button) findViewById(R.id.blue_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
-                buttonBlue.setBackgroundResource(R.color.flash_blueButton);
+                buttonBlue.setBackgroundResource(R.drawable.flash_blue);
             }
 
             public void onFinish() {
-                buttonBlue.setBackgroundResource(R.color.blueButton);
+                buttonBlue.setBackgroundResource(R.drawable.blue_button);
             }
         }.start();
-        storeTurn.addToList("B");
+        StoreTurn.addToList("B");
     }
 
     public void onClickYellowButton(View v) {
@@ -88,14 +88,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         buttonYellow = (Button) findViewById(R.id.yellow_button);
         new CountDownTimer(50, 10) {
             public void onTick(long millisUntilFinished) {
-                buttonYellow.setBackgroundResource(R.color.flash_yellowButton);
+                buttonYellow.setBackgroundResource(R.drawable.flash_yellow);
             }
 
             public void onFinish() {
-                buttonYellow.setBackgroundResource(R.color.yellowButton);
+                buttonYellow.setBackgroundResource(R.drawable.yellow_button);
             }
         }.start();
-        storeTurn.addToList("Y");
+        StoreTurn.addToList("Y");
     }
 
     @Override
