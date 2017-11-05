@@ -20,7 +20,7 @@ public class NewGame extends AppCompatActivity{
 
     public void onClickNewGame(View view) {
         newGameButton = (Button) findViewById(R.id.new_game_button);
-        Intent game = new Intent(this, MainActivity.class);
+        Intent game = new Intent(this, StartGame.class);
         startActivity(game);
     }
 }
